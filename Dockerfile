@@ -1,4 +1,4 @@
-FROM graal19:0.0.1 as builder
+FROM canmogol/graal19:0.0.1 as builder
 WORKDIR /
 ADD . /
 
