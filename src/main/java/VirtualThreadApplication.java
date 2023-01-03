@@ -12,10 +12,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.Executors;
 
 public class VirtualThreadApplication implements HttpHandler {
+    
     private final HttpClient httpClient = HttpClient
             .newBuilder()
             .executor(Executors.newVirtualThreadPerTaskExecutor())
             .build();
+    
     private final HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(URI.create("http://172.17.0.1:9090/test.txt")).build();
 
 
