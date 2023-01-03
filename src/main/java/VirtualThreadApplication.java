@@ -56,4 +56,5 @@ public class VirtualThreadApplication implements HttpHandler {
             log("Error; %s".formatted(e.getMessage()));
         }
     }
+    
 }
